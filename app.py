@@ -23,7 +23,7 @@ csrf.init_app(app)
 @app.route('/index')
 def index():
     form = WordForm()
-    return render_template("index.html", form=form)
+    return render_template("index.html", form=form, name = "Isaac Skorseth")
 
 
 @app.route('/words', methods=['POST','GET'])
@@ -66,7 +66,7 @@ def letters_2_words():
 
     return render_template('wordlist.html',
         wordlist = sorted(sorted(word_set), key=len),
-        name="CS4131")
+        name="Isaac Skorseth")
 
 
 @app.route('/api', methods=["GET"])
